@@ -1,0 +1,16 @@
+.con {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 400px;
+}
+
+.pen {
+}
+.pen::before {
+  content: 'before';
+}
+.pen::after {
+  content: 'after';
+}
