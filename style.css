@@ -1,16 +1,29 @@
-.con {
+.content {
   width: 400px;
-  height: 400px;
+  height: 200px;
   margin: 0 auto;
   text-align: center;
-  line-height: 400px;
 }
 
-.pen {
+.highlight {
+  display: inline-table;
+  position: relative;
 }
-.pen::before {
-  content: 'before';
+.highlight::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(133, 236, 202, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transition: all 0.35s;
 }
-.pen::after {
+.content:hover .highlight::before {
+  left: 0;
+}
+/* .highlight::after {
   content: 'after';
-}
+  display: block;
+} */
